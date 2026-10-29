@@ -143,7 +143,9 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(26, 26, 26);
             ClientSize = new Size(1038, 602);
+            ControlBox = false;
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "IniciarSesion";
             Text = "Codeando";
             Load += IniciarSesion_Load;

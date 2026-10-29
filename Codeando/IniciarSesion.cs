@@ -86,11 +86,7 @@ namespace Codeando.Presentation
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show(
-            "¿Está seguro de que desea salir?",
-            "Confirmar salida",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show( "¿Está seguro de que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {

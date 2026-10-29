@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Codeando.Datos/Codeando.Datos.csproj" Id="0873a71e-c8a7-4db4-841f-c11a96b85eb4" />
+  <Project Path="Codeando.Entidad/Codeando.Entidad.csproj" Id="e45ca0a6-24d9-425e-9d9e-77153a65e0b7" />
+  <Project Path="Codeando.Judge/Codeando.Judge.csproj" Id="e1e619ed-28c5-491a-8a63-d0f80e03fdb2" />
+  <Project Path="Codeando.Negocio/Codeando.Negocio.csproj" Id="5e7c1af4-0021-4603-a2fa-baf37176f7c5" />
+  <Project Path="Codeando/Codeando.Presentation.csproj" />
+</Solution>

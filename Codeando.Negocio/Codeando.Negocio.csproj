@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codeando.Datos\Codeando.Datos.csproj" />
+    <ProjectReference Include="..\Codeando.Entidad\Codeando.Entidad.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -11,14 +11,18 @@ namespace Codeando.Datos
         private readonly string cadenaConexion;
         private string Servidor;
         private string Base;
+        private string Usuario;
+        private string Password;
         private bool SeguridadIntegrada;
         private bool ConfiarCertificado;
 
         public Conexion ()
         {
-            Servidor = "MSI\\SQLEXPRESS";
+            Servidor = "servidor-nuevo.database.windows.net";
             Base = "dbCodeando";
-            SeguridadIntegrada = true;
+            Password = "\\6jLJV4r71yF";
+            Usuario = "KANYELAPARA";
+            SeguridadIntegrada = false;
             ConfiarCertificado = true;
 
             this.cadenaConexion = new SqlConnectionStringBuilder
@@ -26,10 +30,11 @@ namespace Codeando.Datos
                 DataSource = Servidor,
                 InitialCatalog = Base,
                 IntegratedSecurity = SeguridadIntegrada,
+                UserID = Usuario,
+                Password = Password,
                 TrustServerCertificate = ConfiarCertificado
             }.ConnectionString;
         }
-        
 
         public SqlConnection crearConexion ()
         {

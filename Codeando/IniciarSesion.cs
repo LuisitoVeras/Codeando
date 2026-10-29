@@ -18,9 +18,9 @@ namespace Codeando.Presentation
         }
 
         #region variables globales
-        SoundPlayer sonidoMinecraft = new SoundPlayer(
-                "C:\\Sonidos Codeando\\minecraft-click_HRhlZ0U6.wav"
-                );
+        //SoundPlayer sonidoMinecraft = new SoundPlayer(
+        //        "C:\\Sonidos Codeando\\minecraft-click_HRhlZ0U6.wav"
+        //        );
         #endregion
 
         #region Metodos
@@ -60,7 +60,7 @@ namespace Codeando.Presentation
 
         public void EmitirSonidoMinecraft()
         {
-            sonidoMinecraft.Play();
+            //sonidoMinecraft.Play();
         }
         #endregion
 

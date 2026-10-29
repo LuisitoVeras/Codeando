@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            BtnSalir = new Button();
             button1 = new Button();
             txtContraseña = new TextBox();
             label3 = new Label();
@@ -43,15 +44,16 @@
             label1.AutoSize = true;
             label1.Font = new Font("OCR A Extended", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(242, 242, 242);
-            label1.Location = new Point(166, 28);
+            label1.Location = new Point(152, 28);
             label1.Name = "label1";
             label1.Size = new Size(721, 83);
             label1.TabIndex = 0;
-            label1.Text = "Iniciar Sesion";
+            label1.Text = "Iniciar Sesión";
             label1.Click += label1_Click;
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnSalir);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txtContraseña);
             panel1.Controls.Add(label3);
@@ -63,6 +65,21 @@
             panel1.Size = new Size(1014, 578);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // BtnSalir
+            // 
+            BtnSalir.BackColor = Color.FromArgb(189, 189, 189);
+            BtnSalir.BackgroundImageLayout = ImageLayout.None;
+            BtnSalir.FlatStyle = FlatStyle.Popup;
+            BtnSalir.Font = new Font("OCR A Extended", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnSalir.ForeColor = Color.Black;
+            BtnSalir.Location = new Point(928, 11);
+            BtnSalir.Name = "BtnSalir";
+            BtnSalir.Size = new Size(65, 59);
+            BtnSalir.TabIndex = 6;
+            BtnSalir.Text = "X";
+            BtnSalir.UseVisualStyleBackColor = false;
+            BtnSalir.Click += BtnSalir_Click;
             // 
             // button1
             // 
@@ -144,5 +161,6 @@
         private TextBox txtContraseña;
         private Label label3;
         private Button button1;
+        private Button BtnSalir;
     }
 }

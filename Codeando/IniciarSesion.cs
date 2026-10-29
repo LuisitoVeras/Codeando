@@ -25,23 +25,23 @@ namespace Codeando.Presentation
 
         #region Metodos
 
-        private void mensajeOk (string mensaje)
+        private void mensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void mensajeError (string mensaje)
+        private void mensajeError(string mensaje)
         {
             MessageBox.Show(mensaje, "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private async void abrirFormulario (Form form)
+        private async void abrirFormulario(Form form)
         {
             form.Show();
             this.Hide();
         }
         private async void verificarUsuario()
-        { 
+        {
             var usuario = new NUser();
             bool existe = usuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
 
@@ -58,7 +58,7 @@ namespace Codeando.Presentation
             }
         }
 
-        public void EmitirSonidoMinecraft ()
+        public void EmitirSonidoMinecraft()
         {
             sonidoMinecraft.Play();
         }
@@ -82,6 +82,20 @@ namespace Codeando.Presentation
         private void IniciarSesion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+            "¿Está seguro de que desea salir?",
+            "Confirmar salida",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

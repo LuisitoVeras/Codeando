@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codeando.Judge\Codeando.Judge.csproj" />
     <ProjectReference Include="..\Codeando.Negocio\Codeando.Negocio.csproj" />
   </ItemGroup>
 

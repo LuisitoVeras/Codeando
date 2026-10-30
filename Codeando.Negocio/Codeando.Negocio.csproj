@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Codeando.Datos\Codeando.Datos.csproj" />
     <ProjectReference Include="..\Codeando.Entidad\Codeando.Entidad.csproj" />
+    <ProjectReference Include="..\Codeando.Judge\Codeando.Judge.csproj" />
   </ItemGroup>
 
 </Project>

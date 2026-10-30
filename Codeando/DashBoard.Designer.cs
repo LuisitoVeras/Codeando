@@ -28,50 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            txtCodigo = new TextBox();
+            txtConsola = new TextBox();
+            BtnCompilar = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtCodigo
             // 
-            textBox1.BackColor = Color.FromArgb(79, 79, 79);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Cascadia Code", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(12, 12);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(645, 571);
-            textBox1.TabIndex = 0;
+            txtCodigo.BackColor = Color.FromArgb(79, 79, 79);
+            txtCodigo.BorderStyle = BorderStyle.None;
+            txtCodigo.Font = new Font("Cascadia Code", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCodigo.ForeColor = Color.White;
+            txtCodigo.Location = new Point(12, 12);
+            txtCodigo.Multiline = true;
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(645, 571);
+            txtCodigo.TabIndex = 0;
+            txtCodigo.Text = resources.GetString("txtCodigo.Text");
             // 
-            // textBox2
+            // txtConsola
             // 
-            textBox2.BackColor = Color.Black;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Cascadia Code", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(680, 12);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(319, 571);
-            textBox2.TabIndex = 1;
+            txtConsola.BackColor = Color.Black;
+            txtConsola.BorderStyle = BorderStyle.None;
+            txtConsola.Font = new Font("Cascadia Code", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtConsola.ForeColor = Color.White;
+            txtConsola.Location = new Point(680, 12);
+            txtConsola.Multiline = true;
+            txtConsola.Name = "txtConsola";
+            txtConsola.ReadOnly = true;
+            txtConsola.Size = new Size(319, 571);
+            txtConsola.TabIndex = 1;
             // 
-            // button1
+            // BtnCompilar
             // 
-            button1.BackColor = Color.FromArgb(189, 189, 189);
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("OCR A Extended", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(386, 625);
-            button1.Name = "button1";
-            button1.Size = new Size(299, 59);
-            button1.TabIndex = 6;
-            button1.Text = "Compílar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            BtnCompilar.BackColor = Color.FromArgb(189, 189, 189);
+            BtnCompilar.BackgroundImageLayout = ImageLayout.None;
+            BtnCompilar.FlatStyle = FlatStyle.Popup;
+            BtnCompilar.Font = new Font("OCR A Extended", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnCompilar.ForeColor = Color.Black;
+            BtnCompilar.Location = new Point(376, 621);
+            BtnCompilar.Name = "BtnCompilar";
+            BtnCompilar.Size = new Size(299, 59);
+            BtnCompilar.TabIndex = 6;
+            BtnCompilar.Text = "Compílar";
+            BtnCompilar.UseVisualStyleBackColor = false;
+            BtnCompilar.Click += button1_Click;
             // 
             // DashBoard
             // 
@@ -79,9 +81,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 26, 26);
             ClientSize = new Size(1026, 728);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(BtnCompilar);
+            Controls.Add(txtConsola);
+            Controls.Add(txtCodigo);
             Name = "DashBoard";
             Text = "DashBoard";
             FormClosed += DashBoard_FormClosed;
@@ -92,8 +94,8 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
+        private TextBox txtCodigo;
+        private TextBox txtConsola;
+        private Button BtnCompilar;
     }
 }

@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtCodigo.Text" xml:space="preserve">
+    <value>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Solution
+{
+    public void Prueba()
+    {
+        // Escribe tu código aquí
+    }
+}
+</value>
+  </data>
 </root>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Codeando.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,17 @@ namespace Codeando.Presentation
             Application.Exit();
         }
 
+        #region metodos
+
+        public void ponerTextoCodigo (string codigo)
+        {
+            NCompilacion compilador = new NCompilacion();
+            txtConsola.Text = compilador.Compilar(codigo);
+        }
+
+
+        #endregion
+
         private void DashBoard_Load(object sender, EventArgs e)
         {
 
@@ -28,7 +40,7 @@ namespace Codeando.Presentation
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ponerTextoCodigo(txtCodigo.Text);
         }
     }
 }

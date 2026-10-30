@@ -20,5 +20,10 @@ namespace Codeando.Presentation
             //Close unicamente temporal en lo que se hace un Front más decente (Esto no es necesariamente la mejor opción)
             Application.Exit();
         }
+
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

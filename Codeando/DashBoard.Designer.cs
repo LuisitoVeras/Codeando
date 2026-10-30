@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            textBox1 = new TextBox();
             SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(79, 79, 79);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Location = new Point(12, 12);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(645, 571);
+            textBox1.TabIndex = 0;
             // 
             // DashBoard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(26, 26, 26);
+            ClientSize = new Size(1026, 595);
+            Controls.Add(textBox1);
             Name = "DashBoard";
             Text = "DashBoard";
             FormClosed += DashBoard_FormClosed;
+            Load += DashBoard_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBox1;
     }
 }

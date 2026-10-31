@@ -23,18 +23,10 @@ namespace Codeando.Judge
 
             referencias = new MetadataReference[]
             {
-
-                // 1. Referencia base para objetos y tipos fundamentales
                 MetadataReference.CreateFromFile(typeof(object).Assembly.Location),
-
-                // 2. Referencia explícita para System.Console (Permite usar Console.WriteLine)
                 MetadataReference.CreateFromFile(typeof(System.Console).Assembly.Location),
-
-                // 3. Referencia para colecciones y LINQ (List<T>, Enumerable, etc.)
                 MetadataReference.CreateFromFile(typeof(System.Collections.Generic.List<>).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Linq.Enumerable).Assembly.Location),
-
-                // 4. Referencia al runtime principal para evitar fallos de ejecución
                 MetadataReference.CreateFromFile(Assembly.Load("System.Runtime").Location)
             };
 
@@ -72,7 +64,7 @@ namespace Codeando.Judge
                     using(var escritorTexto = new StringWriter())
                     {
                         //Redirigimos todos los console writeline ejecutados a la memoria ram dentro del string writer
-                        Console.SetOut(escritorTexto);
+                        Console.SetOut(escritorTexto);  
 
                         //cramos una instancia de la clase principal, que sera donde 
                         object Instancia = Activator.CreateInstance(tipoClase);
@@ -86,20 +78,16 @@ namespace Codeando.Judge
 
                         }
 
-
-                    }
-
-                    
+                    }    
                 }
 
                 else
                 {
-                    // Filtrar solo las fallas fatales de compilación
                     var erroresCompilacion = result.Diagnostics
                         .Where(d => d.Severity == DiagnosticSeverity.Error)
-                        .Select(d => $"[Línea {d.Location.GetLineSpan().StartLinePosition.Line + 1}]: {d.GetMessage()}");
+                        .Select(d => $"[Linea {d.Location.GetLineSpan().StartLinePosition.Line + 1}]: {d.GetMessage()}");
 
-                    string txtSalida = "--- ERROR DE COMPILACIÓN ---\r\n" + string.Join("\r\n", erroresCompilacion);
+                    string txtSalida = "--- ERROR DE COMPILACION ---\r\n" + string.Join("\r\n", erroresCompilacion);
                     return txtSalida; 
                 }
 

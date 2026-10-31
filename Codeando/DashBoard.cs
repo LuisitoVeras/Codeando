@@ -24,7 +24,7 @@ namespace Codeando.Presentation
 
         #region metodos
 
-        public void ponerTextoCodigo (string codigo)
+        public void ponerTextoCodigo(string codigo)
         {
             NCompilacion compilador = new NCompilacion();
             txtConsola.Text = compilador.Compilar(codigo);
@@ -41,6 +41,11 @@ namespace Codeando.Presentation
         private void button1_Click(object sender, EventArgs e)
         {
             ponerTextoCodigo(txtCodigo.Text);
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

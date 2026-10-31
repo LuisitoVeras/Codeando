@@ -36,6 +36,7 @@
             // 
             // txtCodigo
             // 
+            txtCodigo.AcceptsTab = true;
             txtCodigo.BackColor = Color.FromArgb(79, 79, 79);
             txtCodigo.BorderStyle = BorderStyle.None;
             txtCodigo.Font = new Font("Cascadia Code", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -46,6 +47,7 @@
             txtCodigo.Size = new Size(645, 571);
             txtCodigo.TabIndex = 0;
             txtCodigo.Text = resources.GetString("txtCodigo.Text");
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
             // 
             // txtConsola
             // 
